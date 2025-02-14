@@ -15,7 +15,7 @@ Clone your forked repository to your local machine using Git:
 
 (Replace `your-username` with your GitHub username and `repository-name` with the name of the repository.)
 
-git clone https://github.com/your-username/repository-name.git
+    git clone https://github.com/your-username/repository-name.git
 
 
 
@@ -23,25 +23,25 @@ git clone https://github.com/your-username/repository-name.git
 
 Add the original repository as an "upstream" remote to keep your local copy in sync:
 
-cd repository-name
+    cd repository-name
 
-git remote -v # This will display the current remotes, currently your fork as `origin`.
+    git remote -v # This will display the current remotes, currently your fork as `origin`.
 
-git remote add upstream https://github.com/original-owner/repository-name.git
+    git remote add upstream https://github.com/original-owner/repository-name.git            
 
 (Replace `original-owner` with the original owner's GitHub username and `repository-name` with the name of the repository.)
 
 Verify that the upstream remote has been added successfully :
 
-git remote -v # This time you should see both, `origin` (your fork) and `upstream` (the original repository).
+    git remote -v # This time you should see both, `origin` (your fork) and `upstream` (the original repository).
 
 By setting up the upstream remote, you can easily keep your local copy in sync with the original repository. This allows you to:
 
-    Fetch the latest changes from the original repository using git fetch upstream.
+Fetch the latest changes from the original repository using git fetch upstream.
 
-    Merge or rebase these changes into your local branches to stay up-to-date.
+Merge or rebase these changes into your local branches to stay up-to-date.
 
-    Contribute back to the original project by creating pull requests from your updated fork.
+Contribute back to the original project by creating pull requests from your updated fork.
 
 This setup is crucial for maintaining a smooth workflow when collaborating on projects using GitHub forks and pull requests
 
@@ -51,7 +51,7 @@ This setup is crucial for maintaining a smooth workflow when collaborating on pr
 
 Before starting to work on a new feature or bug fix, create a new branch (usually from main or develop). For a feature :
 
-git checkout -b feature/feature-branch-name
+    git checkout -b feature/feature-branch-name
 
 Always prefix 'feature/' followed by a descriptive name of your feature branch (`feature-branch-name`)
 
@@ -61,9 +61,9 @@ Always prefix 'feature/' followed by a descriptive name of your feature branch (
 
 Work on the new code of your featuree branch making regular commits with clear, descriptive messages:
 
-git add .
-
-git commit -m "Add a descriptive commit message"
+    git add .
+    
+    git commit -m "Add a descriptive commit message"
 
 
 
@@ -71,7 +71,7 @@ git commit -m "Add a descriptive commit message"
 
 Push your feature branch to your forked repository on GitHub:
 
-git push origin feature/feature-branch-name
+    git push origin feature/feature-branch-name
 
 
 
@@ -79,14 +79,14 @@ git push origin feature/feature-branch-name
 
 Before creating a pull request, ensure your fork is up-to-date with the upstream repository:
 
-git fetch upstream
-
-git checkout main
-
-git merge upstream/main # or git rebase upstream/main
-
-git push origin main
-
+    git fetch upstream
+    
+    git checkout main
+    
+    git merge upstream/main # or git rebase upstream/main
+    
+    git push origin main
+    
 Resolve any conflicts that may arise during the merge.
 
 
@@ -121,13 +121,13 @@ After submitting your pull request, other contributors may review your code and 
 
 Once your pull request has been approved and merged, you can safely delete your feature branch:
 
-git checkout main
-
-git pull origin main # to ensure your local main is updated
-
-git branch -d feature-branch-name
-
-git push origin --delete feature-branch-name
+    git checkout main
+    
+    git pull origin main # to ensure your local main is updated
+    
+    git branch -d feature-branch-name
+    
+    git push origin --delete feature-branch-name
 
 
 
