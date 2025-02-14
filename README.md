@@ -46,6 +46,7 @@ Always prefix 'feature/' followed by a descriptive name of your feature branch (
 Make your changes to the code and commit them with clear, descriptive commit messages:
 
 git add .
+
 git commit -m "Add a descriptive commit message"
 
 
@@ -63,8 +64,11 @@ git push origin feature/feature-branch-name
 Before creating a pull request, ensure your fork is up-to-date with the upstream repository:
 
 git fetch upstream
+
 git checkout main
+
 git merge upstream/main # or git rebase upstream/main
+
 git push origin main
 
 Resolve any conflicts that may arise during the merge.
@@ -92,8 +96,11 @@ After submitting your pull request, other contributors may review your code and 
 Once your pull request has been approved and merged, you can safely delete your feature branch:
 
 git checkout main
+
 git pull origin main # to ensure your local main is updated
+
 git branch -d feature-branch-name
+
 git push origin --delete feature-branch-name
 
 
