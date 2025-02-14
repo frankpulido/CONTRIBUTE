@@ -132,4 +132,4 @@ Once your pull request has been approved and merged, you can safely delete your 
 
 
 
-Congratulations, you've successfully contributed to the project! Repeat steps 4-11 for future contributions.
+Congratulations, you've successfully contributed to the project! Repeat steps 4-10 for future contributions.
