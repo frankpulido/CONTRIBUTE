@@ -17,23 +17,39 @@ Clone your forked repository to your local machine using Git:
 
 git clone https://github.com/your-username/repository-name.git
 
-cd repository-name
-
 
 
 ## 3. Add the Upstream Remote
 
 Add the original repository as an "upstream" remote to keep your local copy in sync:
 
+cd repository-name
+
+git remote -v # This will display the current remotes, currently your fork as `origin`.
+
 git remote add upstream https://github.com/original-owner/repository-name.git
 
 (Replace `original-owner` with the original owner's GitHub username and `repository-name` with the name of the repository.)
+
+Verify that the upstream remote has been added successfully :
+
+git remote -v # This time you should see both, `origin` (your fork) and `upstream` (the original repository).
+
+By setting up the upstream remote, you can easily keep your local copy in sync with the original repository. This allows you to:
+
+    Fetch the latest changes from the original repository using git fetch upstream.
+
+    Merge or rebase these changes into your local branches to stay up-to-date.
+
+    Contribute back to the original project by creating pull requests from your updated fork.
+
+This setup is crucial for maintaining a smooth workflow when collaborating on projects using GitHub forks and pull requests
 
 
 
 ## 4. TO CONTRIBUTE : Create a Feature Branch
 
-Before starting work on a new feature or bug fix, create a new branch:
+Before starting to work on a new feature or bug fix, create a new branch (usually from main or develop). For a feature :
 
 git checkout -b feature/feature-branch-name
 
@@ -43,7 +59,7 @@ Always prefix 'feature/' followed by a descriptive name of your feature branch (
 
 ## 5. Make Changes and Commit
 
-Make your changes to the code and commit them with clear, descriptive commit messages:
+Work on the new code of your featuree branch making regular commits with clear, descriptive messages:
 
 git add .
 
@@ -81,13 +97,23 @@ On GitHub, navigate to your forked repository. You should see a banner prompting
 
 Select your feature branch as the "compare branch" and the upstream repository's `main` (or `develop`) branch as the "base branch".
 
-Provide a clear title and description for your pull request.
+Review the changes display in the diff view (if any).
+
+Provide a clear title and a detailed description of your changes for your pull request.
+
+If applicable, fill out any pull request templates provided by the repository.
+
+Optionally, you can mark the pull request as a draft if it's not ready for review.
+
+Finally, click "Create pull request" or "Draft pull request" as appropriate.
+
+By opening a pull request, you're proposing your changes and requesting that someone review and merge them into the main project4. This process allows for code review, discussion, and further modifications before the changes are incorporated into the main codebase.
 
 
 
 ## 9. Address Review Comments
 
-After submitting your pull request, other contributors may review your code and provide feedback. Address any comments or suggestions by making additional commits to your feature branch. These changes will automatically be added to your pull request.
+After submitting your pull request, other contributors may review your code and provide feedback. Address any comments or suggestions by making additional commits to your feature branch. Push updates to your fork repository. Changes will automatically be added to your pull request.
 
 
 
